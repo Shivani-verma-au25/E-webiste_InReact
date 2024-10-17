@@ -7,7 +7,6 @@ function ProductCard({item}) {
   const {AddTocartITem,addWishToList,wishListItems} = useProductContext()
   // console.log(wishListItems,"from card");
     const isInWishList = wishListItems.findIndex(listitem => listitem.id === item.id) !== -1;
-    console.log("pro",isInWishList);
     
 
   

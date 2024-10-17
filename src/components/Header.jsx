@@ -14,7 +14,7 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'Products', href: '/products' },
+    // { name: 'Products', href: '/products' },
     { name: 'About', href: '/about' }, 
     { name: 'Contact', href: '/contact' },
   ];
@@ -74,24 +74,18 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-600 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium"
-              >
-                {item.name}
-              </a>
-            ))}
+              <Link to={'/'} className="text-gray-600 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home</Link>
+              <Link to={'/about'} className="text-gray-600 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">About</Link>
+              <Link to={'/contact'} className="text-gray-600 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="flex items-center px-5">
-              <button className="ml-3 flex-shrink-0 bg-gray-100 p-1 rounded-full text-gray-600 hover:text-gray-900">
+              <Link to={'/cart'} className="ml-3 flex-shrink-0 bg-gray-100 p-1 rounded-full text-gray-600 hover:text-gray-900">
                 <IoCartOutline />
-              </button>
-              <button className="ml-3 flex-shrink-0 bg-gray-100 p-1 rounded-full text-gray-600 hover:text-gray-900">
+              </Link>
+              <Link to={'/wishlist'} className="ml-3 flex-shrink-0 bg-gray-100 p-1 rounded-full text-gray-600 hover:text-gray-900">
                 <FaHeart/>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
