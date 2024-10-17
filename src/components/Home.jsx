@@ -16,7 +16,7 @@ function Home() {
         </div>
 
         {/* cards here */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-6 lg:px-10 sm:gap-3 gap-10 px-10 sm:px-10 sm:py-10 py-10 sm:mt-32 mt-20 '>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-6 lg:px-10 sm:gap-3 gap-10 px-8  sm:px-10 sm:py-10 py-5 sm:mt-32 mt-20 '>
                {isloading ? allProduct?.products?.length > 0 ? allProduct.products.map((item) => <ProductCard  item={item} />) : 'no data'  : "Loading Data ....."}
         </div>
 

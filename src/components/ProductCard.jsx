@@ -25,7 +25,7 @@ function ProductCard({item}) {
         <div className='h-[30%] flex justify-center items-center flex-col '>
             <h1 className='font-bold py-1 sm:px-1 '>{item.title}</h1>
             <span className='font-bold py-1'>${item.price}</span>
-            <div className='w-full flex justify-around items-center sm:py-5 py-4 ' >
+            <div className='w-full flex justify-around items-center mb-6 sm:py-5 py-4 md:mb-7 lg:mb-6 ' >
               <button onClick={() => addToCart(item)} className='bg-black rounded-md px-4 py-1 font-semibold sm:tex-xl text-xl text-white shadow-md ' >Cart</button>
               <button onClick={() => addWishToList(item)}   className={`${isInWishList ? 'text-red-600' : 'text-black'}  rounded-md px-4 py-2 font-semibold xl:font-medium sm:tex-xl text-xl shadow-md `} ><FaHeart /></button>
             </div>

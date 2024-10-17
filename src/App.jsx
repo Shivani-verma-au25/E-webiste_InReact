@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom'
 import WishList from './components/WishList'
 import toast, { Toaster } from 'react-hot-toast';
 import Footer from './components/Footer'
+import  Error from './components/Error'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/Contact' element={<Contact />} />
         <Route path='/Cart' element={<Cart />} />
         <Route path='/wishlist' element={<WishList />} />
+        <Route path='*' element={<Error/>} />
       </Routes>
       <Toaster />
       <Footer />
